@@ -1,3 +1,5 @@
+require('dotenv').config(); // Ensure dotenv is loaded if you're using a .env file
+
 const express = require('express');
 const axios = require('axios');
 const pool = require('./db');
@@ -7,8 +9,6 @@ const PORT = process.env.PORT || 3000; // Use the PORT environment variable or d
 
 app.use(cors());
 app.use(express.json());
-require('dotenv').config();
-
 
 const fetchAndStoreData = async () => {
     try {

@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-    fetch('http://localhost:3000/tickers')
+    fetch('https://hodinn.onrender.com/tickers')
         .then(response => response.json())
         .then(data => {
             const tbody = document.getElementById('tickers');
@@ -22,4 +22,3 @@ document.addEventListener('DOMContentLoaded', () => {
         })
         .catch(error => console.error('Error fetching data:', error));
 });
-//1
