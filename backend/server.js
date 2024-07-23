@@ -3,10 +3,12 @@ const axios = require('axios');
 const pool = require('./db');
 const cors = require('cors');
 const app = express();
-const port = 3000;
+const PORT = process.env.PORT || 3000; // Use the PORT environment variable or default to 3000
 
 app.use(cors());
 app.use(express.json());
+require('dotenv').config();
+
 
 const fetchAndStoreData = async () => {
     try {
@@ -38,8 +40,8 @@ app.get('/tickers', async (req, res) => {
     }
 });
 
-app.listen(port, () => {
-    console.log(`Server running on port ${port}`);
+app.listen(PORT, () => {
+    console.log(`Server running on port ${PORT}`);
     fetchAndStoreData();
     setInterval(fetchAndStoreData, 10 * 60 * 1000); // Fetch data every 10 minutes
 });
