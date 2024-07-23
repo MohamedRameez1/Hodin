@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hodlinfo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>HODLINFO</h1>
+            <div class="prices">
+                <span class="price" id="price1">0.1 %</span>
+                <span class="price" id="price2">0.96 %</span>
+                <span class="price" id="price3">2.73 %</span>
+                <span class="price" id="price4">7.51 %</span>
+            </div>
+            <div class="best-price">Best Price to Trade: <span id="best-price"></span></div>
+        </div>
+        <table>
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Platform</th>
+                    <th>Last Traded Price</th>
+                    <th>Buy / Sell Price</th>
+                    <th>Difference</th>
+                    <th>Savings</th>
+                </tr>
+            </thead>
+            <tbody id="tickers">
+            </tbody>
+        </table>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
+
